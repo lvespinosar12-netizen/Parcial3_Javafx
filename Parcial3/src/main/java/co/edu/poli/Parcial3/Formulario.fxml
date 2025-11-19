@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.poli.Parcial3.Controller.FormularioControlador">
+
+    <children>
+          <Button layoutX="470.0" layoutY="560.0" onAction="#cargarArchivo" text="Cargar Archivo" />
+          <Button layoutX="19.0" layoutY="432.0" onAction="#modificarProduccion" text="Modificar" />
+          <Button layoutX="22.0" layoutY="469.0" onAction="#eliminarProduccion" text="Eliminar" />
+          <Button layoutX="17.0" layoutY="397.0" onAction="#buscarPorCodigo" text="Buscar" />
+          <Button layoutX="18.0" layoutY="560.0" onAction="#salirApp" text="Salir" />
+          <Button layoutX="599.0" layoutY="560.0" onAction="#guardarProduccion" text="Guardar" />
+          <Button layoutX="20.0" layoutY="361.0" onAction="#listarProducciones" text="Listar" />
+          <Button layoutX="690.0" layoutY="560.0" onAction="#guardarArchivo" text="Guardar Archivo" />
+          <TextField fx:id="txtTitulo" layoutX="63.0" layoutY="102.0" prefHeight="25.0" prefWidth="163.0" />
+          <Label layoutX="16.0" layoutY="290.0" text="Fecha Estreno:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+          <TextField fx:id="txtFecha" layoutX="100.0" layoutY="287.0" prefHeight="25.0" prefWidth="102.0" />
+          <TextField fx:id="txtGenero" layoutX="129.0" layoutY="139.0" prefHeight="25.0" prefWidth="95.0" />
+          <Label layoutX="15.0" layoutY="180.0" text="Temporadas (Serie):">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+          <TextField fx:id="txtTemporadas" layoutX="133.0" layoutY="177.0" prefHeight="25.0" prefWidth="89.0" />
+
+           <!-- Tabla -->
+        <TableView fx:id="tblProducciones" layoutX="244.0" layoutY="64.0" onMouseClicked="#mostrarSeleccion" prefHeight="451.0" prefWidth="548.0">
+
+               <columns>
+                <TableColumn fx:id="colCodigo" prefWidth="80" text="Código" />
+                <TableColumn fx:id="colTitulo" prefWidth="120" text="Título" />
+                <TableColumn fx:id="colFecha" prefWidth="100" text="Fecha" />
+                <TableColumn fx:id="colDuracion" prefWidth="80" text="Duración" />
+                <TableColumn fx:id="colTipo" prefWidth="80" text="Tipo" />
+                <TableColumn fx:id="colExtra" prefWidth="100" text="Extra" />
+            </columns>
+
+           </TableView>
+          <ComboBox fx:id="cmbTipo" editable="true" layoutX="63.0" layoutY="65.0" prefHeight="25.0" prefWidth="163.0" />
+          <Label layoutX="22.0" layoutY="69.0" text="Tipo:">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+          <TextField fx:id="txtDuracion" layoutX="75.0" layoutY="250.0" prefHeight="17.0" prefWidth="89.0" />
+          <Label layoutX="15.0" layoutY="253.0" text="Duración:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+          <Label layoutX="17.0" layoutY="143.0" text="Género (Pelicula):">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+          <TextField fx:id="txtCodigo" layoutX="69.0" layoutY="214.0" prefHeight="25.0" prefWidth="95.0" />
+          <Label layoutX="19.0" layoutY="218.0" text="Código:">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+          <Label layoutX="18.0" layoutY="105.0" text="Título:">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="9.0" prefHeight="59.0" prefWidth="248.0" text="Registro de Producciones " textFill="#a70abc" wrapText="true">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font>
+      </Label>
+
+    </children>
+
+</AnchorPane>
