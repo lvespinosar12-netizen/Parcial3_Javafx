@@ -1,4 +1,4 @@
-package co.edu.poli.Parcial3;
+package co.edu.poli.Parcial3.Vista;
 
 //Laura
 
